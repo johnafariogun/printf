@@ -42,6 +42,9 @@ int specifier_c(const char *str, va_list args, int *i)
 	specifier specs[] = {
 		{'s', print_str},
 		{'c', print_char},
+		{'i', print_int},
+		{'d', print_int},
+
 	};
 
 	*i = *i + 1;

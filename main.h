@@ -6,6 +6,7 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int _puts(char *);
 int check(char str);
+int print_int(va_list args);
 char *convert(unsigned int num, int base);
 int _strlen(char *);
 int print_str(va_list);
