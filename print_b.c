@@ -1,15 +1,15 @@
 #include "main.h"
 /**
- * print_int - prints an integer in base 10
+ * print_b - prints an integer in base 2
  * @args: variadic arguments for the int
  * Return: length of the int so it can be printed
  */
-int print_int(va_list args)
+int print_b(va_list args)
 {
 	char *ptr;
 	int i;
 
-	ptr = convert(va_arg(args, int), 10);
+	ptr = convert(va_arg(args, int), 2);
 
 	if (ptr != NULL)
 		i = _puts(ptr);

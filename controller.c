@@ -44,7 +44,7 @@ int specifier_c(const char *str, va_list args, int *i)
 		{'c', print_char},
 		{'i', print_int},
 		{'d', print_int},
-
+		{'b', print_b}
 	};
 
 	*i = *i + 1;
