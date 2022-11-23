@@ -9,7 +9,7 @@
 
 char *convert(long int num, int base)
 {
-	static const char reps[] = "0123456789ABCDEF";
+	static const char reps[] = "0123456789abcdefABCDEF";
 	static char buffer[50];
 	char sign = 0;
 	char *ptr;

@@ -14,7 +14,7 @@ int print_str(va_list args)
 	if (ptr != NULL)
 		string = _puts(ptr);
 	else
-		string = _puts("NULL");
+		string = _puts("(null)");
 
 	return (string);
 }
