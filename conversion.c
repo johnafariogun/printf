@@ -10,7 +10,7 @@
 char *convert(long int num, int base)
 {
 	static const char reps[] = "0123456789abcdefABCDEF";
-	static char buffer[50];
+	static char buffer[500];
 	char sign = 0;
 	char *ptr;
 	long int temp = num;
@@ -20,7 +20,7 @@ char *convert(long int num, int base)
 		temp *= -1;
 		sign = '-';
 	}
-	ptr = &buffer[49];
+	ptr = &buffer[499];
 	*ptr = '\0';
 
 	do {
