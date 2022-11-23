@@ -37,7 +37,7 @@ int controller(const char *str, va_list args)
  */
 int specifier_c(const char *str, va_list args, int *i)
 {
-	int size = 0, no_of_specifiers, j;
+	int j = 0;
 
 	specifier specs[] = {
 		{'s', print_str},
@@ -58,14 +58,13 @@ int specifier_c(const char *str, va_list args, int *i)
 	if (str[*i] == '\0')
 		return (-1);
 
-	no_of_specifiers = sizeof(specs) / sizeof(specs[0]);
-	for (j = 0; j < no_of_specifiers; j++)
+	while (specs[j].type)
 	{
 		if (str[*i] == specs[j].type)
 		{
-			size = specs[j].flag(args);
-			return (size);
+			return (specs[j].flag(args));
 		}
+		j++;
 	}
 
 	_putchar('%');

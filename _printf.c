@@ -12,6 +12,12 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
+	i = _strlen((char *) format);
+
+	if (i < 0)
+	{
+		return (-1);
+	}
 	/* this blocks checks the varaidaic variables and appropriates*/
 	/* the right function from a struct to be used to print the function*/
 
