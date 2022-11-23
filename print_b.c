@@ -9,7 +9,7 @@ int print_b(va_list args)
 	char *ptr;
 	int i;
 
-	ptr = convert(va_arg(args, int), 2);
+	ptr = convert(va_arg(args, unsigned int), 2);
 
 	if (ptr != NULL)
 		i = _puts(ptr);
